@@ -18,7 +18,7 @@ from matplotlib.colors import ListedColormap
 
 # Cargando el dataset
 dataset = pd.read_csv('Social_Network_Ads.csv')  # Lee el archivo CSV con los datos
-X = dataset.iloc[:, :-1].values  # Extrae las características (Edad, Salario Estimado)
+X = dataset.iloc[:, [2,3]].values  # Extrae las características (Edad, Salario Estimado)
 y = dataset.iloc[:, -1].values  # Extrae la variable objetivo (Compra o No Compra)
 
 # Dividiendo el dataset en conjunto de entrenamiento y conjunto de prueba
